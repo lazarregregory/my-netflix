@@ -11,13 +11,18 @@ const VideoList = (props) => {
                 <ul>
                     {
                         films.map(film =>{
-                            return <VideoListItem key={film.id} movie={film}/>
+                            return <VideoListItem key={film.id} movie={film} filmProps={film} callBack={receivefilm}/>
                         })
                     }
                     
                 </ul>
             </div>
         )
+        function receivefilm(film) {
+        
+            props.callBack(film)
+        }
+        
 
 }
 

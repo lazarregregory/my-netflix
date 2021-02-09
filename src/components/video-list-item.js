@@ -8,7 +8,7 @@ const VideoListItem = (props) => {
     console.log('----list---', film.poster_path)
     
     return (
-        <li className="list-group-left">
+        <li className="list-group-left" onClick={handleClick}>
             <div className="media">
                 <div className="media-left">
                     <img width="100px" height="100px" className="media-object img-rounded" src ={`${IMAGE_URL}${film.poster_path}`} />
@@ -22,6 +22,10 @@ const VideoListItem = (props) => {
         </li>
     )
 
+    function handleClick () {
+    
+        props.callBack (film);
+    }
 }
 
 export default VideoListItem;

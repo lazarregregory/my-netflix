@@ -4,10 +4,10 @@ const YOUTUBE_URL = 'https://www.youtube.com/embed/';
 
 const VideoId = (props) => {
 
-const video = props.videoId;
+const vid = props.videoId;
     return(
         <div className ="embed-responsive embed-responsive-16by9">
-            <iframe className="embed-responsive-item" src={`${YOUTUBE_URL}${video}`} />
+            <iframe className="embed-responsive-item" src={`${YOUTUBE_URL}${vid}`} />
         </div>
     )
 }
